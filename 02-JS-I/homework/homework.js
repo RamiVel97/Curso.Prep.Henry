@@ -1,7 +1,7 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const nuevaString = 'Hola';
+const nuevaString = "Hola";
 
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = 5;
@@ -132,13 +132,15 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return Math.pow(num, 2);
+  var alCuadrado = Math.pow(num, 2);
+  return alCuadrado;
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  return num * num * num;
+  //return num * num * num;
+  return Math.pow(num, 3);
 } 
 
 function elevar(num, exponent) {
@@ -150,14 +152,14 @@ function elevar(num, exponent) {
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  var resto = num % 1;
-  var entero = num - resto;
-  if (resto >= 0.5) {
-  return entero + 1;
-  } else {
-  return entero;
-  }
-  Math.round(num);
+  //var resto = num % 1;
+  //var entero = num - resto;
+  //if (resto >= 0.5) {
+  //return entero + 1;
+  //} else {
+  //return entero;
+  //}
+  return Math.round(num);
 }
 
 function redondearHaciaArriba(num) {
@@ -244,8 +246,15 @@ function esVocal(letra){
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
-  if(letra.length > 1){
-    return "Dato incorrecto"
+  //if(letra.length > 1){
+  //  return "Dato incorrecto"
+  //}
+  //if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+  //  return "Es vocal"
+  //}
+  //return "Dato incorrecto"
+  if(letra.length !==1){
+    return "Dato incorrecto";
   }
   if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
     return "Es vocal"
